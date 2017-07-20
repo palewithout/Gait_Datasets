@@ -1,5 +1,5 @@
 # Gait_Datasets
-Part of the datasets of the  article " Robust Gait Recognition by Integrating Inertial and RGBD Sensors".  
+Part of the datasets of the  article ["Robust Gait Recognition by Integrating Inertial and RGBD Sensors"](http://ieeexplore.ieee.org/document/7888946/).  
 ## gait_mobile_Acc_data
 Folder gait_mobile_Acc_data/fast(or nomal) contains the phone acceleration data when the user is walking at fast(or normal) speed.   
 Subfolders ("aaa", "cxb", "lbr", ...) store data for ten different users, the folder name is the name of the tester's abbreviation.   
