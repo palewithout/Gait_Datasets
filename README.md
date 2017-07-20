@@ -11,4 +11,17 @@ Subfolders store data for 15 different users, the file name of a single data sub
 The total amount of data in a subfolder is: (1 + 4) x 9 x 15 = 675
 ### Kinect data of 9 gestures
 The kinect of 9 gestures corresponding to the above acceleration data can be downloaded [**here**](https://pan.baidu.com/s/1hszgWJE). The data has been compressed twice,  you can run "Kinect_data_9gestures_15tester.part01.exe" to do the initial decompression.  
-The file tree of this dataset is shown in "File Tree of "Kinect data of 9 gestures"". Subfolders named from 1 to 15 store data for 15 different users, and every subfolder has (1 + 4) x 9 = 45 groups of data, the ratio of data in fast speed and normal speed is also 1:4.
+The file tree of this dataset is shown in "File Tree of "Kinect data of 9 gestures"". Subfolders named from 1 to 15 store data for 15 different users, and every subfolder has (1 + 4) x 9 = 45 groups of data, the ratio of data in fast speed and normal speed is also 1:4.  
+The file structure of each video subfolder is as follows:
+- Video_subfolder
+  + BodyIndexCalibrated  
+  This folder contains calibrated human body data which represented with txt file for each frame, named in time. For every txt file, there are lots of lines, each of which is  in the form of (x,y,z). x,y are coordinate of different pixle (frame size is 1920 * 1080)and z is pixle value(range from 0 to 255).
+  + OriginalCalibratedText
+  This folder contains human body data without any calibration. Pixles are in the form of (x,y,z). z is the depth value of the pixle at (x,y).
+  + rgbClipped
+  This folder contains rgb pictures of the tester. each of the picture is corresponding to the txt file in the BodyIndexCalibrated folder.
+  + rgbVideo
+  This folder contains rgb pictures of the tester without clipping.
+  + SkeletonData
+  This folder contains skeleton data of the tester for each frame, which is represented in the form of (x,y,z). x,y is coordinate of the skeleton point and z is the horizontal distance from the point to the kinect. each txt file contains 9 skeleton points, which represents head,.... respectively.
+
